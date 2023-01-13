@@ -23,4 +23,15 @@ public class AuthorService {
         }
         return "added succesfully";
     }
+    public Author get_author(int id)throws Exception{
+        try {
+            Author ath = authorrepo.findById(id).get();
+            if (ath == null) {
+                throw new Exception();
+            }
+            return ath;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

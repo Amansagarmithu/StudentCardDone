@@ -10,4 +10,6 @@ public class BookDto {
     private String name;
 
     private int pages;
+
+    private int Author_id;
 }
